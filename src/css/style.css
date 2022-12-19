@@ -3,3 +3,14 @@
  body{
     background-color: #eaeaea;
  }
+
+
+ .movie-card{
+   cursor: pointer;
+   transform: scale(1,1);
+   transition: all 0.3s ease 0s;
+ }
+
+ .movie-card:hover,.movie-card:focus{
+   transform: scale(1.05,1.05);
+ }
