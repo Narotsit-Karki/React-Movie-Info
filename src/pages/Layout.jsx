@@ -5,14 +5,9 @@ import { Link, Outlet } from "react-router-dom"
 import { useState } from "react"
 import { useEffect } from "react"
 import { Home } from "./Home"
-
+import { SearchForm } from "../components/SearchForm"
 export const Layout = () => {
-    
-    let [query , setSearch] = useState('');
-    
-    const getQuery = (e) =>{
-        setSearch(e.target.value)
-    }
+   
 
     return <>
         <div className="container bg-white pt-3">
@@ -24,10 +19,7 @@ export const Layout = () => {
 
             </div>
             <div className="col-4 ms-auto">
-                <div className="input-group mt-2">
-                    <input onInput={getQuery} type="search" className="form-control" placeholder="Search  movie and more ..."/>
-                    <button onClick={console.log(query)}className="btn btn-success"><i className="fa-solid fa-search"></i></button>
-                </div>
+              <SearchForm />
             </div>
         </header>
       
